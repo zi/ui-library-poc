@@ -3,6 +3,7 @@ import { Config } from '@stencil/core';
 export const config: Config = {
   namespace: 'ui-library-poc',
   buildEs5: true,
+  globalStyle: 'src/global/main.css',
   outputTargets: [
     {
       type: 'dist',

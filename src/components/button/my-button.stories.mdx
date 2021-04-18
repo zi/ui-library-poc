@@ -1,0 +1,107 @@
+import { Meta, Story, Canvas, ArgsTable, Description } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import { action } from '@storybook/addon-actions';
+import Readme from './readme.md';
+
+<Meta
+  title="Buttons/MyButton"
+  argTypes={{
+    type: { control: { type: 'select' }, options: ['contained', 'outlined'] },
+    size: { control: { type: 'select' }, options: ['big', 'regular', 'small'] },
+    width: { control: { type: 'select' }, options: ['wide', 'medium', 'narrow'] },
+    color: { control: { type: 'select' }, options: ['primary', 'secondary'] },
+    text: { control: 'text' },
+    disabled: { control: 'boolean' },
+    loading: { control: 'boolean' },
+    loadingText: { control: 'text' },
+  }}
+/>
+
+export const Template = args =>
+  html` <my-button disabled="${args.disabled}" type="${args.type}" size="${args.size}" width="${args.width}" color="${args.color}"> ${args.text}</my-button>`;
+
+<Canvas>
+  <Story
+    name="Playground"
+    args={{
+      text: 'Test button',
+      type: 'contained',
+      size: 'regular',
+      width: 'medium',
+      color: 'primary',
+      disabled: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Description>{Readme}</Description>
+
+---
+
+# Type: contained
+
+<Canvas>
+  <Story name="Big wide">{() => html`<my-button size="big" width="wide">Big</my-button>`}</Story>
+  <Story name="Big medium">{() => html`<my-button size="big" width="medium">Big</my-button>`}</Story>
+  <Story name="Big narrow">{() => html`<my-button size="big" width="narrow">Big</my-button>`}</Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Regular wide">{() => html`<my-button size="regular" width="wide">Regular</my-button>`}</Story>
+  <Story name="Regular medium">{() => html`<my-button size="regular" width="medium">Regular</my-button>`}</Story>
+  <Story name="Regular narrow">{() => html`<my-button size="regular" width="narrow">Regular</my-button>`}</Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Small wide">{() => html`<my-button size="small" width="wide">Small</my-button>`}</Story>
+  <Story name="Small medium">{() => html`<my-button size="small" width="medium">Small</my-button>`}</Story>
+  <Story name="Small narrow">{() => html`<my-button size="small" width="narrow">Small</my-button>`}</Story>
+</Canvas>
+
+### Colors
+
+<Canvas>
+  <Story name="Primary">{() => html`<my-button size="big">Primary</my-button>`}</Story>
+  <Story name="Secondary">{() => html`<my-button size="big" color="secondary">Secondary</my-button>`}</Story>
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story name="Disabled">{() => html`<my-button size="big" disabled="true">Disabled</my-button>`}</Story>
+</Canvas>
+
+# Type: outlined
+
+<Canvas>
+  <Story name="Outlined big wide">{() => html`<my-button type="outlined" size="big" width="wide">Big</my-button>`}</Story>
+  <Story name="Outlined big medium">{() => html`<my-button type="outlined" size="big" width="medium">Big</my-button>`}</Story>
+  <Story name="Outlined big narrow">{() => html`<my-button type="outlined" size="big" width="narrow">Big</my-button>`}</Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Outlined regular wide">{() => html`<my-button type="outlined" size="regular" width="wide">Regular</my-button>`}</Story>
+  <Story name="Outlined regular medium">{() => html`<my-button type="outlined" size="regular" width="medium">Regular</my-button>`}</Story>
+  <Story name="Outlined regular narrow">{() => html`<my-button type="outlined" size="regular" width="narrow">Regular</my-button>`}</Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Outlined small wide">{() => html`<my-button type="outlined" size="small" width="wide">Small</my-button>`}</Story>
+  <Story name="Outlined small medium">{() => html`<my-button type="outlined" size="small" width="medium">Small</my-button>`}</Story>
+  <Story name="Outlined small narrow">{() => html`<my-button type="outlined" size="small" width="narrow">Small</my-button>`}</Story>
+</Canvas>
+
+### Colors
+
+<Canvas>
+  <Story name="Outlined primary">{() => html`<my-button size="big" type="outlined">Primary</my-button>`}</Story>
+  <Story name="Outlined secondary">{() => html`<my-button size="big" type="outlined" color="secondary">Secondary</my-button>`}</Story>
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story name="Outlined disabled">{() => html`<my-button size="big" type="outlined" disabled="true">Disabled</my-button>`}</Story>
+</Canvas>

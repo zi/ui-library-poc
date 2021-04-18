@@ -1,0 +1,69 @@
+@font-face {
+  font-family: TUITypeLt;
+  src: url(https://assets.musement.com/fonts/TUITypeLt.woff) format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: TUIType;
+  src: url(https://assets.musement.com/fonts/TUIType.woff) format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: TUITypeLtBd;
+  src: url(https://assets.musement.com/fonts/TUITypeLtBd.woff) format('woff');
+  font-display: swap;
+}
+
+:root {
+  --my-color-primary: #1a7ead;
+  --my-color-primary-hover: #076794;
+  --my-color-primary-30: #1a7ead4d;
+  --my-color-primary-10: #1a7ead1a;
+
+  --my-color-secondary: #092a5e;
+  --my-color-secondary-hover: #001b45;
+
+  --my-color-outlined-primary: white;
+  --my-color-outlined-primary-hover: #0767941a;
+  --my-color-outlined-secondary: white;
+  --my-color-outlined-secondary-hover: #001b451a;
+
+  --my-color-success: #69bc6b;
+  --my-color-success-30: rgba(105, 188, 107, 0.3);
+  --my-color-success-10: rgba(105, 188, 107, 0.1);
+
+  --my-color-error: #e84a46;
+  --my-color-error-30: rgba(232, 74, 70, 0.3);
+  --my-color-error-10: rgba(232, 74, 70, 0.1);
+
+  --my-color-warning: #ffb743;
+  --my-color-warning-30: rgba(255, 183, 67, 0.3);
+  --my-color-warning-10: rgba(255, 183, 67, 0.1);
+
+  --my-color-gray-1: #fafafa;
+  --my-color-gray-2: #f2f5f6;
+  --my-color-gray-3: #dce4e6;
+  --my-color-gray-4: #c4cacc;
+  --my-color-gray-5: #626262;
+
+  --my-color-white: white;
+  --my-color-black: black;
+
+  --my-border-color: rgba(35, 35, 35, 0.1);
+
+  --my-button-hover-background: #1a7ead17;
+
+  --my-color-font: #232323;
+  --my-color-font-light: #808080;
+
+  --my-font-light: TUITypeLt, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --my-font-regular: TUIType, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --my-font-bold: TUITypeLtBd, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --my-border-radius-big: 5px;
+
+  --my-z-index-modal: 700;
+  --my-z-index-dropdown: 800;
+  --my-z-index-popup: 900;
+  --my-z-index-tooltip: 1000;
+}
