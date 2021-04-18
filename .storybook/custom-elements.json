@@ -1,0 +1,51 @@
+{
+  "version": 1.2,
+  "tags": [
+    {
+      "name": "my-button",
+      "path": "./src/components/button/my-button.tsx",
+      "description": "",
+      "attributes": [
+        {
+          "name": "color",
+          "type": "\"primary\" | \"secondary\"",
+          "description": "the background color when type is \"contained\", the foreground color when type is \"outlined\"",
+          "defaultValue": "'primary'",
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "description": "indicating disabled button",
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "\"big\" | \"regular\" | \"small\"",
+          "description": "The size of the button",
+          "defaultValue": "'regular'",
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"contained\" | \"outlined\"",
+          "description": "the type of the button",
+          "defaultValue": "'contained'",
+          "required": false
+        },
+        {
+          "name": "width",
+          "type": "\"medium\" | \"narrow\" | \"wide\"",
+          "description": "The width of the button",
+          "defaultValue": "'medium'",
+          "required": false
+        }
+      ],
+      "events": [],
+      "methods": [],
+      "slots": [],
+      "cssProperties": [],
+      "cssParts": []
+    }
+  ]
+}

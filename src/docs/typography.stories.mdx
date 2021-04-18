@@ -1,0 +1,37 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/addon-docs/blocks';
+
+<Meta title="Typography" />
+
+# Typography
+
+<br />
+
+## Main Text Colors
+
+<ColorPalette>
+  <ColorItem title="Default" colors={['#232323']} />
+  <ColorItem title="Light Gray" colors={['#808080']} />
+</ColorPalette>
+
+## Font Families
+
+**--my-font-light** `TUITypeLt, sans-serif`
+
+<Typeset
+  fontSizes={['14px', '16px', '18px', '20px', '28px', '40px']}
+  fontFamily="TUITypeLt, sans-serif"
+/>
+
+**--my-font-regular** `TUIType, sans-serif`
+
+<Typeset
+  fontSizes={['14px', '16px', '18px', '20px', '28px', '40px']}
+  fontFamily="TUIType, sans-serif"
+/>
+
+**--my-font-bold** `TUITypeLtBd, sans-serif`
+
+<Typeset
+  fontSizes={['14px', '16px', '18px', '20px', '28px', '40px']}
+  fontFamily="TUITypeLtBd, sans-serif"
+/>
