@@ -15,7 +15,8 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build-utils": "rollup -c rollup.config.js",
+    "build": "stencil build --docs && npm run build-utils",
     "start": "stencil build --dev --watch --serve --docs",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
@@ -38,6 +39,11 @@
     "@storybook/web-components": "^6.2.8",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.0.2",
-    "lit-html": "^1.3.0"
+    "lit-html": "^1.3.0",
+    "rollup": "^2.45.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
   }
 }
